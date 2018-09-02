@@ -23,7 +23,13 @@ namespace Web_App.Models
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+
+
         }
+
+        public DbSet<Library> Library { get; set; }
+
+        public DbSet<Friends> Friends { get; set; }
 
         public static ApplicationDbContext Create()
         {
